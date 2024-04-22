@@ -1,5 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Button, View } from "react-native";
+import { StyleSheet, Button, View, Text } from "react-native";
 import { Label, Body, Title } from "./components/Typography";
 import { useState } from "react";
 import { ThemeManager } from "theme/context/Theme";
@@ -20,6 +20,10 @@ export default function App() {
         <StatusBar style="auto" />
 
         <Button title="Toggle emphasis" onPress={handleToggleEmphasis} />
+
+        <Text style={{ fontWeight: "600" }}>
+          Native Text component that's bold
+        </Text>
       </View>
     </ThemeManager>
   );
