@@ -10,6 +10,7 @@ import { createExtendedThemeTokens, createThemes, systemFont } from "./theme";
 
 const appTheme = createTamagui({
   ...config,
+  defaultFont: "systemFont",
   fonts: {
     heading: systemFont,
     body: systemFont,

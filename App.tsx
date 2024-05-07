@@ -24,6 +24,7 @@ export default function App() {
         <Text style={{ fontWeight: "600" }}>
           Native Text component that's bold
         </Text>
+        <Body emphasis>My custom Body component set to bold</Body>
       </View>
     </ThemeManager>
   );
