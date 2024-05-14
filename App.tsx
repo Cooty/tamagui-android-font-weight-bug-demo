@@ -3,14 +3,27 @@ import { StyleSheet, Button, View, Text } from "react-native";
 import { Label, Body, Title } from "./components/Typography";
 import { useState } from "react";
 import { ThemeManager } from "theme/context/Theme";
-import { Text as TamaguiText } from "tamagui";
+import {
+  Text as TamaguiText,
+  getToken,
+  useTheme,
+  useConfiguration,
+} from "tamagui";
 
 export default function App() {
   const [isBold, setIsBold] = useState(false);
+  const theme = useTheme();
+  const config = useConfiguration();
 
   function handleToggleEmphasis() {
     setIsBold(!isBold);
   }
+
+  const fontWeight3 = getToken("$font");
+  console.log(fontWeight3);
+
+  console.log("theme:", theme);
+  console.group("config:", config);
 
   return (
     <ThemeManager>
@@ -25,7 +38,9 @@ export default function App() {
         <Text style={{ fontWeight: "600" }}>
           Native Text component that's bold
         </Text>
-        <Body emphasis>My custom Body component set to bold</Body>
+        <Body emphasis fontFamily="$systemFont">
+          My custom Body component set to bold
+        </Body>
         <TamaguiText fontWeight="600">
           This here is the regular Text component from Tamagui
         </TamaguiText>

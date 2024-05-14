@@ -1,8 +1,8 @@
-import {createFont} from '@tamagui/core'
+import { createFont } from "@tamagui/core";
 
 // const systemFontStack = 'sans-serif'
 export const systemFont = createFont({
-  family: '',
+  family: "",
   size: {
     1: 12,
     2: 14,
@@ -28,16 +28,16 @@ export const systemFont = createFont({
     10: 40,
   },
   weight: {
-    1: '400',
-    2: '400',
-    3: '600',
-    4: '700',
-    5: '800',
-    6: '800',
-    7: '800',
-    8: '800',
-    9: '800',
-    10: '800',
+    1: "400",
+    2: "400",
+    3: "600",
+    4: "700",
+    5: "800",
+    6: "800",
+    7: "800",
+    8: "800",
+    9: "800",
+    10: "800",
   },
   letterSpacing: {
     1: 0,
@@ -46,4 +46,4 @@ export const systemFont = createFont({
     4: 0,
   },
   face: {},
-})
+});

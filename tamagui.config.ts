@@ -12,8 +12,7 @@ const appTheme = createTamagui({
   ...config,
   defaultFont: "systemFont",
   fonts: {
-    heading: systemFont,
-    body: systemFont,
+    systemFont,
   },
   tokens: createExtendedThemeTokens(config.tokens),
   themes: createThemes(),
